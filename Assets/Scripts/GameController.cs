@@ -6,9 +6,11 @@ public class GameController : MonoBehaviour
 {
     public AudioSource[] audioData;
 
+    public string[,] answers;
+
+    private enum Direction {LEFT, RIGHT, UP, DOWN};
     private string state;
     private int audioIndex;
-
     private bool firstTimeChangestate;
 
     // Start is called before the first frame update
@@ -16,6 +18,8 @@ public class GameController : MonoBehaviour
     {
         state = "StateStart";
         audioIndex = 0;
+
+        answers = new int[,] { { Direction.LEFT, Direction.LEFT }, { Direction.LEFT }, { Direction.LEFT } };
     }
 
     // Update is called once per frame
@@ -80,7 +84,18 @@ public class GameController : MonoBehaviour
     }
 
     void StateDirectionInput() {
-        
+        if (Input.GetKeyDown(KeyCode.UpArrow)) {
+
+        }
+        else if (Input.GetKeyDown("")) {
+
+        }
+        else if (Input.GetKeyDown("")) {
+
+        }
+        else if (Input.GetKeyDown("")) {
+
+        }
     }
 
     void StateResult() {
